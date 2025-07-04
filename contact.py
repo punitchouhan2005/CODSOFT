@@ -1,4 +1,4 @@
-
+#creating list for contacts 
 contacts = [] 
 
 def add_contact():
