@@ -1,5 +1,3 @@
-# Contact Book
-
 
 contacts = [] 
 
@@ -7,12 +5,12 @@ def add_contact():
     print("\n--- Add New Contact ---")
     name = input("Enter name: ")
     phone = input("Enter phone number: ")
-    email = input("Enter email: ")
-    address = input("Enter address: ")
+    email = input("Enter email/gmail: ")
+    address = input("Enter home/office address: ")
     contact = {"name": name, "phone": phone, "email": email, "address": address}
     contacts.append(contact)
     print("Contact added successfully!\n")
-
+#want to view all contacts 
 def view_contacts():
     print("\n--- Contact List ---")
     if not contacts:
@@ -21,7 +19,7 @@ def view_contacts():
     for i, contact in enumerate(contacts, start=1):
         print(f"{i}. {contact['name']} | {contact['phone']} | {contact['email']} | {contact['address']}")
     print()
-
+#want to search contacts
 def search_contact():
     print("\n--- Search Contact ---")
     keyword = input("Enter name or phone to search: ").lower()
@@ -32,7 +30,7 @@ def search_contact():
             found = True
     if not found:
         print("Contact not found.\n")
-
+#want to update contacts
 def update_contact():
     print("\n--- Update Contact ---")
     name = input("Enter the name of the contact to update: ").lower()
@@ -46,7 +44,7 @@ def update_contact():
             print("Contact updated successfully!\n")
             return
     print("Contact not found.\n")
-
+#want to delete contacts
 def delete_contact():
     print("\n--- Delete Contact ---")
     name = input("Enter the name of the contact to delete: ").lower()
@@ -58,7 +56,7 @@ def delete_contact():
     print("Contact not found.\n")
 
 def show_menu():
-    print("====== Contact Book Menu ======")
+    print("====== Options Available in Contact Book ======")
     print("1. Add Contact")
     print("2. View Contacts")
     print("3. Search Contact")
@@ -67,7 +65,6 @@ def show_menu():
     print("6. Exit")
     print("================================")
 
-# Main loop
 while True:
     show_menu()
     choice = input("Choose an option (1-6): ")
