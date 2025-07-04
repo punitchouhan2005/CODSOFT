@@ -1,6 +1,7 @@
+# ToDo application with GUI 
 import tkinter as tk
 from tkinter import messagebox
-
+#creating class for adding all its features such as new entry,update, delete,mark as done etc
 class ToDoApp:
     def __init__(self, root):
         self.root = root
@@ -12,7 +13,7 @@ class ToDoApp:
         self.task_entry = tk.Entry(root, width=50)
         self.task_entry.grid(row=0, column=0, padx=10, pady=10, columnspan=2)
 
-        # Buttons
+        # Buttons available 
         tk.Button(root, text="Add Task", command=self.add_task).grid(row=0, column=2)
         tk.Button(root, text="Update Task", command=self.update_task).grid(row=1, column=0)
         tk.Button(root, text="Delete Task", command=self.delete_task).grid(row=1, column=1)
