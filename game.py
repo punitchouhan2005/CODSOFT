@@ -12,10 +12,10 @@ comp_score = 0
 while True:
     print("\nEnter your choice \n 1 - Rock \n 2 - Paper \n 3 - Scissors \n")
 
-    # input from user
+    # choice from user
     choice = int(input("Enter your choice: "))
 
-    # Looping until user enters valid input
+    # user enters valid input 
     while choice > 3 or choice < 1:
         choice = int(input('Enter a valid choice please: '))
 
@@ -31,7 +31,7 @@ while True:
     print('User choice is:', choice_name)
     print("Now it's Computer's Turn...")
 
-    # Computer chooses randomly
+    # Computer chooses random choice 
     comp_choice = random.randint(1, 3)
 
     if comp_choice == 1:
@@ -64,7 +64,7 @@ while True:
         print("<== Computer wins this round! ==>")
         comp_score += 1
 
-    # Show current scores
+    # current scores
     print(f"Score => User: {user_score} | Computer: {comp_score}")
 
     # want to play aagin
