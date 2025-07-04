@@ -7,8 +7,7 @@ p3 = string.digits
 p4 = string.punctuation
 
 #taking password length input from user
-#length should be greater then or equal to digit
-#plength = int(input("ENTER PASSWORD LENGTH (LENGTH>=8):"))
+#length should be greater then or equal to 8 digit
 while (True) :
     plength = int(input("ENTER PASSWORD LENGTH (LENGTH>=8):"))
     if plength < 8 : 
